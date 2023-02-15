@@ -1,0 +1,31 @@
+server:
+  port: 8763
+spring:
+  application:
+    name: yitaotao-user
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yitaotao?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+
+  #redis配置·
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0 # 几号库
+    lettuce:
+      pool:
+        max-active: 8 # 最大连接
+        max-idle: 8 # 最大空闲连接
+        min-idle: 0 # 最小空闲连接
+        max-wait: 100ms # 连接等待时间
+mybatis:
+  mapperLocations: classpath*:/mapper/*.xml
+  configuration:
+    mapUnderscoreToCamelCase: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

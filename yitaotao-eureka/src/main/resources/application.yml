@@ -1,0 +1,15 @@
+# Tomcat
+server:
+  port: 8761
+
+# Spring
+spring:
+  application:
+    # ????
+    name: yitaotao-eureka
+eureka:
+  client:
+    sevice-url:
+      defaultZone: http://localhost:${server.port}/eureka
+    register-with-eureka: false
+    fetch-registry: false
