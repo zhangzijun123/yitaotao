@@ -13,4 +13,5 @@ import tk.mybatis.mapper.common.BaseMapper;
 @Mapper
 public interface YiUserMapper extends BaseMapper<YiUser> {
 
+
 }
